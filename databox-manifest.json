@@ -1,1 +1,52 @@
-{"app":{"name":"bulnbonoff","description":"testing hue and plug on off","tags":"on,off","id":"2d614f0f.0a6c8"},"packages":[{"type":"tab","id":"97048eae.d3bdb","name":"new package","risks":"","benefits":"lots","purpose":"to test on and off","install":"optional","datastores":[{"id":"9421dc08.a8e9a","name":"bulbsout","type":"set-bulb-on"},{"id":"68cf0357.8231ec","name":"plugout","type":"TP-SetPowerState"}]}],"allowed-combinations":[]}
+{
+    "manifest-version": 1,
+    "name": "tlodge-bulnbonoff",
+    "version": "0.1.0",
+    "description": "testing hue and plug on off",
+    "author": "tlodge",
+    "licence": "MIT",
+    "databox-type": "app",
+    "tags": [
+        "on",
+        "off"
+    ],
+    "homepage": "https://github.com/tlodge/tlodge-bulnbonoff",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tlodge/tlodge-bulnbonoff.git"
+    },
+    "packages": [
+        {
+            "id": "97048eae.d3bdb",
+            "name": "new package",
+            "purpose": "to test on and off",
+            "required": false,
+            "datastores": [
+                "9421dc08.a8e9a",
+                "68cf0357.8231ec"
+            ],
+            "benefits": "lots"
+        }
+    ],
+    "allowed-combinations": [],
+    "datasources": [
+        {
+            "type": "set-bulb-on",
+            "required": true,
+            "name": "bulbsout",
+            "clientid": "9421dc08.a8e9a",
+            "granularities": []
+        },
+        {
+            "type": "TP-SetPowerState",
+            "required": true,
+            "name": "plugout",
+            "clientid": "68cf0357.8231ec",
+            "granularities": []
+        }
+    ],
+    "network-permissions": [],
+    "resource-requirements": {},
+    "volumes": [],
+    "export-whitelist": []
+}
